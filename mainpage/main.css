@@ -160,6 +160,17 @@ html, body {
     transform: translateX(-50%);
 }
 
+/* GIF image size */
+.gif-image {
+    width: 25px;  /* Adjust the width */
+    height: 25px; /* Adjust the height */
+    object-fit: contain; /* Ensures the image scales properly */
+    position : absolute; 
+    top : 20; 
+    right : 0;
+    z-index : 10; 
+}
+
 /* Corps de la fenêtre Finder */
 .finder-body {
     display: flex;
