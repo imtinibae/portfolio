@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Main Page</title>
+</head>
+<body>
+
+    <!-- Conteneur pour le texte d'introduction, le bouton et le cœur -->
+    <div class="intro-container">
+        <div class="intro-message">Hi, I'm Tinéni but you can call me Tini</div>
+        <button id="more-info-btn" class="more-info-button">about me</button>
+        <div class="heart-container">
+            <img src="../images/cdg1.png" alt="Heart Image" class="heart-image">
+        </div>
+    </div>
+
+    <!-- Icônes du bureau -->
+    <div class="icon-container">
+        <div class="icon-wrapper dossier1">
+            <img src="../images/fileblue.png" alt="Dossier 1" class="icon" onclick="goToPage('../project/project.html')">
+            <p>projects</p>
+        </div>
+        <div class="icon-wrapper dossier2">
+            <img src="../images/fileblue.png" alt="Dossier 2" class="icon" id="education-folder">
+            <p>education</p>
+        </div>
+        <div class="icon-wrapper dossier3">
+            <img src="../images/fileblue.png" alt="Dossier 3" class="icon" onclick="goToPage('page1.html')">
+            <p>moodboard</p>
+        </div>
+    </div>
+
+    <!-- Fenêtre Finder pour l'éducation -->
+    <div class="finder" id="education-finder">
+        <div class="finder-header">
+            <div class="finder-buttons">
+                <button class="close-btn mac-btn" id="close-education-finder"></button> 
+                <button class="minimize-btn mac-btn"></button>
+                <button class="fullscreen-btn mac-btn"></button>
+            </div>
+            <p class="finder-title">Education</p>
+        </div>
+        <div class="finder-body">
+            <div class="sidebar">
+                <ul>
+                    <li>Favoris</li>
+                    <li>Documents</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="line line-gray">
+                    <p data-tooltip="Description: Formation à Ada Tech School, Paris. Développement d'applications modernes.">2024 : RNCP VI - Concepteur/Développeur d'Applications - Ada Tech School, Paris</p>
+                </div>
+                <div class="line line-white">
+                    <p data-tooltip="Description: Licence en Information et Communication, formation polyvalente.">2023 : Licence Information - Communication - Université Côte d'Azur, Nice</p>
+                </div>
+                <div class="line line-gray">
+                    <p data-tooltip="Description: Baccalauréat Littéraire, spécialisation en littérature.">2018 : Baccalauréat Littéraire - Lycée Bristol, Cannes</p>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <div class="card-container" id="card-container" style="display: none;">
+        <div class="card" id="card-four">
+            <button id="close-card-btn" class="close-card-button">X</button>
+            <img src="../images/backcard.png" alt="Back of Card" class="card-image" id="back-card">
+            <img src="../images/frontcard.png" alt="Front of Card" class="card-image front" id="front-card" style="display: none;">
+        </div>
+    </div>
+
+    <!-- Section contact chessboard -->
+    <div class="chess-contact">
+        <h2>Contact Me</h2>
+        <div class="chessboard">
+            <div class="piece" id="email" title="Email me">📧</div>
+            <div class="piece" id="linkedin" title="Connect on LinkedIn">🔗</div>
+            <div class="piece" id="github" title="View my GitHub">🐱</div>
+        </div>
+    </div>
+
+    <!-- Tooltip Container -->
+    <div class="tooltip" id="tooltip"></div>
+
+</body>
+</html>

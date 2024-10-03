@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap');
+
+
+body {
+    font-family : 'VT323';
+    background : url('../images/backgroundtexture.gif') no-repeat center center fixed; 
+    background-size : cover;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+   }
+
+   #introText {
+    font-family : 'VT323';
+    color : black; 
+    display: flex   ;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .box {
+    width: 200px; /* Largeur fixe pour toutes les boîtes */
+    height: 100px; /* Hauteur fixe pour toutes les boîtes */
+    margin: 10px; /* Marge pour espacer les boîtes */
+    border: 1px solid black; /* Bordure pour chaque boîte */
+    display: flex; /* Utilisez flexbox pour centrer le texte */
+    justify-content: center; /* Centre le texte horizontalement */
+    align-items: center; /* Centre le texte verticalement */
+    cursor : pointer; 
+}
+

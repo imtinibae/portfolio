@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap');
+
+body {
+    font-family: VT323; /* Police personnalisée */
+    background-color: #f0f0f0; /* Couleur de fond */
+    display: flex; /* Flexbox pour l'alignement */
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    margin: 0; /* Enlever les marges par défaut */
+    overflow: hidden; /* Empêcher le défilement */
+}
+
+.projects-container {
+    display: flex; /* Flexbox pour les projets */
+    flex-direction: column; /* Alignement vertical */
+    align-items: center; /* Centrer les éléments */
+    visibility: hidden; /* Cache la liste par défaut */
+    position: relative; /* Position relative pour le conteneur */
+    flex: 1; /* Prendre de l'espace restant */
+}
+
+.project {
+    opacity: 0; /* Invisible par défaut */
+    transform: translateY(50px); /* Les projets commencent légèrement en bas */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation fluide */
+    width: 80%; /* Largeur des projets */
+    height: auto; /* Hauteur automatique pour le projet */
+    background-color: white; /* Couleur de fond pour chaque projet */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espace à l'intérieur des projets */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 20px 0; /* Espace entre les projets */
+    display: flex; /* Utiliser flexbox pour aligner les colonnes */
+    flex-direction: column; /* Aligner verticalement pour éviter le chevauchement */
+}
+
+.project.visible {
+    opacity: 1; /* Rendre visible */
+    transform: translateY(0); /* Remonte à sa position */
+}
+
+/* Ajout de styles pour le curseur personnalisé sur le projet 1 */
+#project1 {
+    cursor: url('../images/cursorghibli.png'), auto; /* Remplace le chemin par celui de ton image de curseur */
+}
+
+/* Styles pour le titre */
+h2 {
+    flex: 1; /* Prendre de l'espace flexible */
+    min-width: 200px; /* Largeur minimum pour éviter les retours à la ligne */
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+}
+
+/* Styles pour la description */
+.project-description1 {
+    flex: 2; /* Prendre deux fois plus d'espace que le titre */
+    position: relative; 
+    text-align: justify; /* Justifier le texte */
+}
+
+.project-description {
+    flex: 2; /* Prendre deux fois plus d'espace que le titre */
+    padding-left: 20px; /* Espace entre le titre et la description */
+}
+
+/* Conteneur pour le GIF et la vidéo */
+.gif-video-container {
+    display: flex; /* Flex pour aligner le GIF et la vidéo */
+    flex-direction: column; /* Disposition verticale pour le GIF et la vidéo */
+    align-items: center; /* Centrer les éléments dans le conteneur */
+    flex: 1; /* Prendre de l'espace flexible pour la colonne */
+}
+
+/* Styles pour le GIF */
+.gif-container {
+    width: 100%; /* Ajuste selon le design souhaité */
+    display: flex; /* Utiliser flexbox pour le conteneur */
+    justify-content: center; /* Centrer le GIF */
+    margin-bottom: 10px; /* Espace entre le GIF et la vidéo */
+}
+
+.gif-container iframe {
+    width: 80px; /* Largeur du GIF */
+    height: 60px; /* Hauteur du GIF */
+}
+
+/* Styles pour la vidéo */
+.video-container {
+    display: none; /* Cacher par défaut */
+}
+
+video {
+    width: 350px; /* Largeur de la vidéo */
+    height: auto; /* Maintient les proportions de la vidéo */
+    border-radius: 8px; /* Coins arrondis pour la vidéo */
+}
+
+/* Media Queries pour les écrans plus petits */
+@media (max-width: 768px) {
+    /* Ajustement de la largeur des projets */
+    .project {
+        width: 90%; /* Prendre 90% de la largeur sur mobile */
+        height: auto; /* Hauteur automatique pour le projet */
+    }
+
+    /* Ajustement de la taille des images GIF */
+    .gif-container iframe {
+        width: 60px; /* Réduction de la taille du GIF */
+        height: 45px; /* Réduction de la hauteur du GIF */
+    }
+
+    /* Ajustement de la largeur de la vidéo */
+    video {
+        width: 100%; /* Prendre toute la largeur disponible */
+        height: auto; /* Maintient les proportions de la vidéo */
+    }
+
+    /* Ajustement de la police des titres */
+    h2 {
+        font-size: 16px; /* Taille de police réduite pour les titres */
+    }
+
+    /* Ajustement de la police des descriptions */
+    .project-description1, .project-description {
+        font-size: 12px; /* Taille de police réduite pour les descriptions */
+    }
+}

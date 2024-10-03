@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="project.css" rel="stylesheet"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+
+    <div class="projects-container" id="projects">
+        <div class="project hidden" id="project1">
+            <h2>ghibli chrome extension</h2>
+            <p class="project-description1"> L'extension vous permet d'obtenir un espace avec les informations clés de la journée, et démarrer votre navigation avec des outils pratiques! A cela s'ajoute, des informations clés sur les films pour mieux les découvrir. 
+                Elles sont récupérées grâce à une API qui regroupe des données concernant chaque film (https://ghibliapi.vercel.app/).
+            </p>
+            <div class="gif-video-container">
+                <div class="gif-container">
+                    <iframe src="https://giphy.com/embed/KnnDTgqsfwZX9BZcF4" width="100" height="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                </div>
+                <div class="video-container" id="videoContainer" data-video="../video/ghiblivideo.mov">
+                    <video id="projectVideo"  controls muted></video>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project hidden" id="project2">
+            <h2>le comptoir</h2>
+            <p class="project-description">Description du projet 2.</p>
+        </div>
+
+        <div class="project hidden" id="project3">
+            <h2>weareclothed</h2>
+            <p class="project-description">Description du projet 3.</p>
+        </div>
+    </div>
+
+    <script src="project.js" defer></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
