@@ -26,7 +26,7 @@ function showProjects() {
                 projectVideo.src = videoSrc; // Définir la source de la vidéo
                 projectVideo.play(); // Joue la vidéo
                 videoContainer.style.display = 'block'; // Affiche le conteneur de vidéo
-            }, 5000); // Délai de 5 secondes
+            }, 2000); // Délai de 5 secondes
         }, (projects.length - 1 - index) * 400); // Décalage de 400ms entre chaque projet
     }
 }
