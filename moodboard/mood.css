@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Basic reset */
+* {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background scrolling text */
+.scrolling-text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2; /* Augmenté temporairement pour tester la visibilité */
+    display: flex;
+    mix-blend-mode: screen; /* Permet de mélanger le texte avec les images en dessous */
+    flex-direction: column;
+    justify-content: space-around; /* Creates space between the rows */
+    overflow: hidden;
+    pointer-events: none; /* Allows interaction with the gallery */
+    gap : 200px;
+}
+
+.scrolling-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5); /* Correct opacity for better visibility */
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+}
+
+/* Scrolling text animation */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Horizontal scrolling gallery */
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: space; /* Horizontally centers the gallery */
+    align-items: center; /* Vertically centers the gallery */
+    height: 100vh; /* Full screen height to center vertically */
+    position: relative;
+    z-index: 1;
+    padding: 50px 0; /* Space around the gallery */
+    font-family: 'VT323', monospace;
+}
+
+.gallery {
+    display: inline-flex;
+    gap: 20px; /* Space between the images */
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px; /* Set a fixed height to ensure uniform size */
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Hide scrollbar */
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
