@@ -359,15 +359,12 @@ html, body {
     }
 
     .mac-btn {
-        width: 8px;  /* Utilise une taille plus petite */
-        height: 8px;
-    }
-    
-    .close-btn, .minimize-btn, .fullscreen-btn {
-        border-radius: 50%;  /* Assure que les boutons restent circulaires */
+        width: 12px;  /* Utilise une taille qui permet une bonne visibilité */
+        height: 12px; /* Assure que la hauteur est égale à la largeur pour qu'ils soient parfaitement ronds */
+        border-radius: 50%;  /* Garantit que les boutons restent circulaires */
+        flex-shrink: 0; /* Empêche les boutons de se déformer dans un layout flex */
     }
 
     .finder-buttons {
-        gap: 3px; /* Ajuste l'espacement entre les boutons */
+        gap: 5px; /* Ajuste l'espacement entre les boutons */
     }
-}
