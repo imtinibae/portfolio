@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap');
 
 body {
-    font-family: VT323; /* Police personnalisée */
-    background-color: #f0f0f0; /* Couleur de fond */
+    font-family: VT323; 
+    background-color: #f0f0f0; 
     display: flex; /* Flexbox pour l'alignement */
     height: 100vh; /* Prendre toute la hauteur de la fenêtre */
     margin: 0; /* Enlever les marges par défaut */
@@ -12,9 +12,9 @@ body {
 .projects-container {
     display: flex; /* Flexbox pour les projets */
     flex-direction: column; /* Alignement vertical */
-    align-items: center; /* Centrer les éléments */
-    visibility: hidden; /* Cache la liste par défaut */
-    position: relative; /* Position relative pour le conteneur */
+    align-items: center; 
+    visibility: hidden; 
+    position: relative; 
     flex: 1; /* Prendre de l'espace restant */
 }
 
@@ -38,7 +38,6 @@ body {
     transform: translateY(0); /* Remonte à sa position */
 }
 
-/* Ajout de styles pour le curseur personnalisé sur le projet 1 */
 #project1 {
     cursor: url('../images/cursorghibli.png'), auto; /* Remplace le chemin par celui de ton image de curseur */
 }
@@ -116,7 +115,7 @@ video {
 
     /* Ajustement de la police des titres */
     h2 {
-        font-size: 16px; /* Taille de police réduite pour les titres */
+        font-size: 16px; 
     }
 
     /* Ajustement de la police des descriptions */
