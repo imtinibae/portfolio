@@ -6,7 +6,7 @@ body {
     display: flex; /* Flexbox pour l'alignement */
     height: 100vh; /* Prendre toute la hauteur de la fenêtre */
     margin: 0; /* Enlever les marges par défaut */
-    overflow: hidden; /* Empêcher le défilement */
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
 .projects-container {
