@@ -41,25 +41,25 @@ body {
     }
 
     #dvdText {
-        font-size: 24px;
+        font-size: 12px;
     }
 
     #loadingText {
-        font-size: 20px;
+        font-size: 12px;
     }
 }
 
 /* Pour les grands écrans (plus de 1024px) */
 @media only screen and (min-width: 1024px) {
     body {
-        font-size: 16px;
+        font-size: 12pxx;
     }
 
     #dvdText {
-        font-size: 28px;
+        font-size: 12px;
     }
 
     #loadingText {
-        font-size: 24px;
+        font-size: 12px;
     }
 }
