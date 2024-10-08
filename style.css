@@ -18,3 +18,48 @@ body {
     0% { opacity: 1; }
     100% { opacity: 0.7; }
 }
+
+/* Pour les petits écrans (moins de 600px de largeur) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    #dvdText {
+        font-size: 18px;
+    }
+
+    #loadingText {
+        font-size: 16px;
+    }
+}
+
+/* Pour les écrans moyens (entre 600px et 1024px) */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    #dvdText {
+        font-size: 24px;
+    }
+
+    #loadingText {
+        font-size: 20px;
+    }
+}
+
+/* Pour les grands écrans (plus de 1024px) */
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    #dvdText {
+        font-size: 28px;
+    }
+
+    #loadingText {
+        font-size: 24px;
+    }
+}
